@@ -1,42 +1,46 @@
-بالطبع! إليك نموذج لملف README يتضمن معلومات حول تثبيت وكيل WebSocket، والإعدادات، بالإضافة إلى كيفية تشغيله وتنزيل `virtualenv`. يمكنك تعديل التفاصيل حسب الحاجة.
 
-```markdown
-# WebSocket Agent for IoT Applications
+---
+
+
+
+
+
+# <img src="https://user-images.githubusercontent.com/25181517/187070862-03888f18-2e63-4332-95fb-3ba4f2708e59.png" alt="websocket icon" width="5%" /> WebSocket Agent for IoT Applications
 
 ## Introduction
-This project implements a WebSocket agent that facilitates secure communication between IoT devices and external servers. It addresses the challenges of limited device capabilities by allowing efficient data exchange without the overhead of traditional SSL/TLS connections.
+This project implements a **WebSocket agent** that enables secure and efficient communication between IoT devices and external servers. It addresses the challenges posed by limited device capabilities by allowing seamless data exchange without the overhead of traditional SSL/TLS connections.
 
 ## Features
-- Bidirectional communication between IoT devices and servers.
-- Support for both SSL and non-SSL configurations.
-- Easy integration with existing IoT applications.
+- **Bidirectional Communication**: Facilitates real-time data exchange between IoT devices and servers.
+- **Flexible Security Options**: Support for both SSL and non-SSL configurations to accommodate various use cases.
+- **Easy Integration**: Designed for straightforward integration with existing IoT applications.
 
 ## Prerequisites
-Before you begin, ensure you have the following installed on your system:
-- Python 3.6 or newer
-- pip (Python package installer)
+Before you begin, ensure that you have the following installed on your system:
+- **Python**: Version 3.6 or newer.
+- **pip**: Python package installer.
 
 ## Setup Instructions
 
 ### 1. Create a Virtual Environment
 To create an isolated Python environment for this project, follow these steps:
 
-1. Install `virtualenv` if you haven't already:
+1. **Install `virtualenv`** if you haven't already:
    ```bash
    pip install virtualenv
    ```
 
-2. Create a new virtual environment:
+2. **Create a new virtual environment**:
    ```bash
    virtualenv venv
    ```
 
-3. Activate the virtual environment:
-   - On Windows:
+3. **Activate the virtual environment**:
+   - On **Windows**:
      ```bash
      venv\Scripts\activate
      ```
-   - On macOS/Linux:
+   - On **macOS/Linux**:
      ```bash
      source venv/bin/activate
      ```
@@ -44,7 +48,7 @@ To create an isolated Python environment for this project, follow these steps:
 ### 2. Install Required Libraries
 Once the virtual environment is activated, install the required libraries by running:
 ```bash
-pip install websockets
+pip install websockets logging
 ```
 
 ### 3. Create the Configuration File
@@ -62,6 +66,8 @@ server2_url = localhost:8766
 valid_token = key
 ```
 
+*Note*: Ensure that the specified server addresses are valid, and that each server is on a different network to optimize connectivity and performance for your end devices and external services.
+
 ### 4. Run the WebSocket Agent
 To run the WebSocket agent, execute the following command in the terminal:
 ```bash
@@ -69,10 +75,7 @@ python main.py
 ```
 
 ## Conclusion
-For more information and to access the source code, please visit the GitHub repository: [GitHub Repository Link](https://github.com/username/repo-name).
+This WebSocket agent is designed to enhance communication capabilities for IoT applications, allowing for flexible configurations and efficient data transfer, catering to the needs of various devices with limited capabilities.
 
 ---
-
-Feel free to customize the `GitHub Repository Link` to point to your actual repository. This README provides clear instructions on how to set up and run the WebSocket agent while separating the installation and setup details for clarity.
-```
 
