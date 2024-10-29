@@ -18,30 +18,22 @@ USE_SSL = config.getboolean('server', 'use_ssl')
 SSL_CERT = config.get('server', 'ssl_cert')
 SSL_KEY = config.get('server', 'ssl_key')
 VALID_TOKEN = config.get('auth', 'valid_token')
-SERVER1_URL = config.get('server', 'server1_url').split(':')
-SERVER2_URL = config.get('server', 'server2_url').split(':')
+SERVER_URL = config.get('server', 'server_url').split(':')
 
-# Queues for message passing between servers
-server1_to_server2_q = asyncio.Queue()
-server2_to_server1_q = asyncio.Queue()
+# Queue for message passing between clients
+message_queue = asyncio.Queue()
 
-# Sets to keep track of connected clients
-server1_clients = set()
-server2_clients = set()
+# Dictionary to keep track of connected clients and their tags
+clients = {}
 
-async def handler_server1_to_server2():
+async def distribute_messages():
     while True:
-        message = await server1_to_server2_q.get()
-        if server2_clients:
-            await asyncio.gather(*(client.send(message) for client in server2_clients))
-            logger.info("Message sent from Server 1 to Server 2")
-
-async def handler_server2_to_server1():
-    while True:
-        message = await server2_to_server1_q.get()
-        if server1_clients:
-            await asyncio.gather(*(client.send(message) for client in server1_clients))
-            logger.info("Message sent from Server 2 to Server 1")
+        message, sender_tags, sender = await message_queue.get()
+        for client, client_tags in clients.items():
+            # Skip the sender and only send to clients with shared tags
+            if client != sender and any(tag in client_tags for tag in sender_tags):
+                await client.send(message)
+                logger.info(f"Message sent to client with tags {client_tags}")
 
 async def authenticate(websocket):
     token = websocket.request_headers.get("Authorization")
@@ -52,33 +44,25 @@ async def authenticate(websocket):
     logger.info(f"Connection authenticated with token: {token}")
     return True
 
-async def server1(websocket, path):
+async def handler(websocket, path):
     if not await authenticate(websocket):
         return
-    server1_clients.add(websocket)
-    logger.info("Client connected to Server 1")
-    try:
-        async for message in websocket:
-            await server1_to_server2_q.put(message)
-            logger.info("Message received from Client on Server 1")
-    except ConnectionClosed:
-        logger.info("Client disconnected from Server 1")
-    finally:
-        server1_clients.remove(websocket)
 
-async def server2(websocket, path):
-    if not await authenticate(websocket):
-        return
-    server2_clients.add(websocket)
-    logger.info("Client connected to Server 2")
+    # Retrieve tags from the client's headers
+    tags_header = websocket.request_headers.get("tag", "")
+    client_tags = tags_header.split(",") if tags_header else []
+    clients[websocket] = client_tags
+
+    logger.info(f"Client connected with tags: {client_tags}")
+
     try:
         async for message in websocket:
-            await server2_to_server1_q.put(message)
-            logger.info("Message received from Client on Server 2")
+            await message_queue.put((message, client_tags, websocket))
+            logger.info(f"Message received from client with tags {client_tags}")
     except ConnectionClosed:
-        logger.info("Client disconnected from Server 2")
+        logger.info("Client disconnected")
     finally:
-        server2_clients.remove(websocket)
+        clients.pop(websocket, None)
 
 async def main():
     ssl_context = None
@@ -86,14 +70,13 @@ async def main():
         ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
         ssl_context.load_cert_chain(certfile=SSL_CERT, keyfile=SSL_KEY)
 
-    server_1 = websockets.serve(server1, SERVER1_URL[0], int(SERVER1_URL[1]), ssl=None)
-    server_2 = websockets.serve(server2, SERVER2_URL[0], int(SERVER2_URL[1]), ssl=ssl_context)
+    server = websockets.serve(handler, SERVER_URL[0], int(SERVER_URL[1]), ssl=ssl_context)
 
-    asyncio.create_task(handler_server1_to_server2())
-    asyncio.create_task(handler_server2_to_server1())
+    # Start the message distribution task
+    asyncio.create_task(distribute_messages())
 
-    logger.info("Servers running...")
-    async with server_1, server_2:
+    logger.info("Server running...")
+    async with server:
         await asyncio.Future()
 
 if __name__ == "__main__":
