@@ -1,0 +1,35 @@
+@startuml
+
+[*] --> Disconnected
+
+state Disconnected {
+    [*] --> Idle
+    Idle --> Connecting : Initiate Connection
+    Connecting --> Authenticating : Connection Established
+}
+
+state Authenticating {
+    [*] --> Checking
+    Checking --> Authenticated : Valid Token
+    Checking --> NotAuthenticated : Invalid Token or Tags
+    NotAuthenticated --> [*] : Close Connection (4001)
+}
+
+state Authenticated {
+    [*] --> WaitingForMessage
+    WaitingForMessage --> SendingMessage : Send Message (message, tags)
+    SendingMessage --> MessageQueued : Put Message in MessageQueue
+    MessageQueued --> ProcessingMessage : Acknowledge Message Received
+}
+
+state ProcessingMessage {
+    [*] --> RetrievingMessage
+    RetrievingMessage --> ProcessingTags : Get Message
+    ProcessingTags --> SendingToTargets : Send Message to TargetClient(s)
+    ProcessingTags --> NoTargets : Log No Recipients
+}
+
+SendingToTargets --> [*]
+NoTargets --> [*]
+
+@enduml

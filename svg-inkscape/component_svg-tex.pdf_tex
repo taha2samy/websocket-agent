@@ -1,0 +1,98 @@
+%% Creator: Inkscape 1.4 (86a8ad7, 2024-10-11), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'component_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{793.11282349bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.58155028)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{component_svg-tex.pdf}}%
+    \put(0.00449179,0.56666107){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{WebSocket Agent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{component_svg-tex.pdf}}%
+    \put(0.58984357,0.43021453){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{External Services}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{component_svg-tex.pdf}}%
+    \put(0.35104085,0.1450092){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WebSocket Server\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{component_svg-tex.pdf}}%
+    \put(0.35432223,0.02842112){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Authentication Module\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{component_svg-tex.pdf}}%
+    \put(0.35666743,0.51654209){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Message Queue Module\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{component_svg-tex.pdf}}%
+    \put(0.13412026,0.38009556){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Message Distributor Module\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{component_svg-tex.pdf}}%
+    \put(0.04900312,0.26160673){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logger Module\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{component_svg-tex.pdf}}%
+    \put(0.23728025,0.26160673){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Client Interface\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{component_svg-tex.pdf}}%
+    \put(0.61500706,0.38009556){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Redis Server\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{component_svg-tex.pdf}}%
+    \put(0.58373471,0.52159958){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Manages incoming and outgoing messages\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{component_svg-tex.pdf}}%
+    \put(0.58401845,0.03346913){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Validates tokens and tags for clients\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{component_svg-tex.pdf}}%
+    \put(0.76144901,0.38515303){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Distributes messages based on tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{component_svg-tex.pdf}}%
+    \put(0.58443453,0.26666421){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logs activities and errors\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{component_svg-tex.pdf}}%
+    \put(0.35248768,0.20829925){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Connects to\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{component_svg-tex.pdf}}%
+    \put(0.42719332,0.09171119){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Authenticates clients\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{component_svg-tex.pdf}}%
+    \put(0.44232358,0.3248968){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Queues messages\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{component_svg-tex.pdf}}%
+    \put(0.22766307,0.46324406){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sends messages for distribution\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{component_svg-tex.pdf}}%
+    \put(0.07352359,0.3248968){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logs processing events\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{component_svg-tex.pdf}}%
+    \put(0.23049999,0.3248968){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sends messages to clients\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{component_svg-tex.pdf}}%
+    \put(0.55012665,0.46324406){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(Optional) Publishes messages\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{component_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

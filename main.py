@@ -2,9 +2,10 @@ import asyncio
 import logging
 import websockets
 import ssl
-from websockets.exceptions import ConnectionClosed
 import configparser
-
+from message_queue import get_message_queue
+from message_distributor import distribute_messages  
+from auth import authenticate
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -14,41 +15,21 @@ config = configparser.ConfigParser()
 config.read('config.conf')
 
 # Extract configuration values
-USE_SSL = config.getboolean('server', 'use_ssl')
-SSL_CERT = config.get('server', 'ssl_cert')
-SSL_KEY = config.get('server', 'ssl_key')
-VALID_TOKEN = config.get('auth', 'valid_token')
-SERVER_URL = config.get('server', 'server_url').split(':')
+USE_SSL = config.getboolean('server', 'use_ssl', fallback=False)
+SSL_CERT = config.get('server', 'ssl_cert', fallback=None)
+SSL_KEY = config.get('server', 'ssl_key', fallback=None)
+VALID_TOKEN = config.get('auth', 'valid_token', fallback=None)
+SERVER_URL = config.get('server', 'server_url', fallback="localhost:8765").split(':')
+MESSAGE_FORMAT = config.get('server', 'message_format', fallback='json')
 
-# Queue for message passing between clients
-message_queue = asyncio.Queue()
-
-# Dictionary to keep track of connected clients and their tags
+# Dictionary to track connected clients and their tags
 clients = {}
 
-async def distribute_messages():
-    while True:
-        message, sender_tags, sender = await message_queue.get()
-        for client, client_tags in clients.items():
-            # Skip the sender and only send to clients with shared tags
-            if client != sender and any(tag in client_tags for tag in sender_tags):
-                await client.send(message)
-                logger.info(f"Message sent to client with tags {client_tags}")
 
-async def authenticate(websocket):
-    token = websocket.request_headers.get("Authorization")
-    if token != VALID_TOKEN:
-        logger.warning(f"Connection refused due to invalid token: {token}")
-        await websocket.close(code=4001)
-        return False
-    logger.info(f"Connection authenticated with token: {token}")
-    return True
-
-async def handler(websocket, path):
+async def handler(websocket, path, message_queue):
     if not await authenticate(websocket):
         return
 
-    # Retrieve tags from the client's headers
     tags_header = websocket.request_headers.get("tag", "")
     client_tags = tags_header.split(",") if tags_header else []
     clients[websocket] = client_tags
@@ -57,27 +38,42 @@ async def handler(websocket, path):
 
     try:
         async for message in websocket:
-            await message_queue.put((message, client_tags, websocket))
+            await message_queue.put(message, client_tags, websocket)
             logger.info(f"Message received from client with tags {client_tags}")
-    except ConnectionClosed:
+    except websockets.exceptions.ConnectionClosed:
         logger.info("Client disconnected")
     finally:
         clients.pop(websocket, None)
 
 async def main():
+    message_queue = await get_message_queue()  # Initialize the message queue
+
     ssl_context = None
     if USE_SSL:
-        ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-        ssl_context.load_cert_chain(certfile=SSL_CERT, keyfile=SSL_KEY)
+        if SSL_CERT and SSL_KEY:
+            ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+            ssl_context.load_cert_chain(certfile=SSL_CERT, keyfile=SSL_KEY)
+            logger.info("SSL context initialized for secure connection")
+        else:
+            logger.error("SSL is enabled, but SSL_CERT or SSL_KEY is missing in the configuration.")
+            return
 
-    server = websockets.serve(handler, SERVER_URL[0], int(SERVER_URL[1]), ssl=ssl_context)
+    server = websockets.serve(lambda ws, path: handler(ws, path, message_queue), SERVER_URL[0], int(SERVER_URL[1]), ssl=ssl_context)
 
     # Start the message distribution task
-    asyncio.create_task(distribute_messages())
+    asyncio.create_task(distribute_messages(message_queue, clients,MESSAGE_FORMAT))  # Pass clients to the function
 
     logger.info("Server running...")
     async with server:
-        await asyncio.Future()
+        await asyncio.Future()  # Run the server indefinitely
+
+async def shutdown(server):
+    logger.info("Shutting down server...")
+    await server.wait_closed()
+    logger.info("Server has shut down.")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Received shutdown signal. Exiting...")

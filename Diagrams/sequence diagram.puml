@@ -1,0 +1,36 @@
+@startuml
+actor Client
+participant WebSocketServer
+participant Authentication
+participant MessageQueue
+participant MessageDistributor
+participant Logger
+
+Client -> WebSocketServer: Initiate Connection
+WebSocketServer -> Authentication: Check Token and Tags
+
+alt Authentication Failed
+    Authentication -> WebSocketServer: Invalid Token or Tags
+    WebSocketServer -> Client: Close Connection (4001)
+else Authentication Successful
+    Authentication -> WebSocketServer: Valid Token
+    WebSocketServer -> Client: Connection Established
+
+    Client -> WebSocketServer: Send Message (message, tags)
+    WebSocketServer -> MessageQueue: Put Message (message, sender_tags)
+    MessageQueue -> WebSocketServer: Acknowledge Message Received
+
+    MessageDistributor -> MessageQueue: Get Message
+    MessageQueue -> MessageDistributor: Return Message (message, sender_tags)
+
+    MessageDistributor -> MessageDistributor: Process Tags
+    note right of MessageDistributor: Identify Target Clients Based on Tags
+
+    alt Matching Tags Found
+        MessageDistributor -> TargetClient : Send Message 
+        note right of TargetClient: Message Received
+    else No Matching Tags
+        MessageDistributor -> Logger: Log No Recipients (No matching tags)
+    end
+end
+@enduml

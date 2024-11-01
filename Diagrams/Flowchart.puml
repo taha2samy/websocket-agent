@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Initiate Connection;
+:Check Token and Tags;
+
+if (Is Authentication Successful?) then (yes)
+    :Connection Established;
+    :Send Message (message, tags);
+    :Put Message in Queue;
+    :Get Message from Queue;
+    :Process Tags;
+    
+    if (Are Matching Tags Found?) then (yes)
+        :Send Message to Target Clients;
+    else (no)
+        :No Matching Tags Found;
+    endif
+    
+else (no)
+    :Close Connection (4001);
+endif
+
+stop
+@enduml

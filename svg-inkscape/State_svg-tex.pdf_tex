@@ -1,0 +1,110 @@
+%% Creator: Inkscape 1.4 (86a8ad7, 2024-10-11), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'State_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{761.10209656bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.84469338)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{State_svg-tex.pdf}}%
+    \put(0.41338081,1.75354749){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Disconnected\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{State_svg-tex.pdf}}%
+    \put(0.4054975,1.38697382){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Authenticating\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{State_svg-tex.pdf}}%
+    \put(0.50502423,1.14554758){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Authenticated\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{State_svg-tex.pdf}}%
+    \put(0.48235973,0.62327862){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ProcessingMessage\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{State_svg-tex.pdf}}%
+    \put(0.72402316,1.63037085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Idle\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{State_svg-tex.pdf}}%
+    \put(0.69740642,1.5052234){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Connecting\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{State_svg-tex.pdf}}%
+    \put(0.31645559,1.26379715){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Checking\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{State_svg-tex.pdf}}%
+    \put(0.09929023,1.1169706){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}NotAuthenticated\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{State_svg-tex.pdf}}%
+    \put(0.51626777,0.99182313){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WaitingForMessage\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{State_svg-tex.pdf}}%
+    \put(0.5255898,0.86667566){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SendingMessage\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{State_svg-tex.pdf}}%
+    \put(0.52658507,0.74152819){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MessageQueued\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{State_svg-tex.pdf}}%
+    \put(0.45901529,0.50010198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}RetrievingMessage\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{State_svg-tex.pdf}}%
+    \put(0.47121471,0.37495451){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ProcessingTags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{State_svg-tex.pdf}}%
+    \put(0.38421257,0.24980704){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SendingToTargets\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{State_svg-tex.pdf}}%
+    \put(0.5788317,0.24980704){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}NoTargets\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{State_svg-tex.pdf}}%
+    \put(0.73758173,1.55639412){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Initiate Connection\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{State_svg-tex.pdf}}%
+    \put(0.85090424,1.43124665){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Connection Established\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{State_svg-tex.pdf}}%
+    \put(0.79966276,1.18982044){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Valid Token\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{State_svg-tex.pdf}}%
+    \put(0.27837921,1.18982044){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Invalid Token or Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{State_svg-tex.pdf}}%
+    \put(0.13056724,1.04299388){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Close Connection (4001)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{State_svg-tex.pdf}}%
+    \put(0.58484269,0.91784641){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Send Message (message, tags)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{State_svg-tex.pdf}}%
+    \put(0.58484269,0.79269895){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Put Message in MessageQueue\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{State_svg-tex.pdf}}%
+    \put(0.75630458,0.66755148){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Acknowledge Message Received\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{State_svg-tex.pdf}}%
+    \put(0.52571791,0.42612526){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Get Message\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{State_svg-tex.pdf}}%
+    \put(0.37692052,0.30097779){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Send Message to TargetClient(s)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{State_svg-tex.pdf}}%
+    \put(0.59962389,0.30097779){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Log No Recipients\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{State_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

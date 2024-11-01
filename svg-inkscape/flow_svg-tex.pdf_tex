@@ -1,0 +1,86 @@
+%% Creator: Inkscape 1.4 (86a8ad7, 2024-10-11), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'flow_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{448.20991516bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.04206195)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{flow_svg-tex.pdf}}%
+    \put(0.51023654,0.93892049){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Initiate Connection\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{flow_svg-tex.pdf}}%
+    \put(0.49147539,0.84861342){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Check Token and Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{flow_svg-tex.pdf}}%
+    \put(0.47086024,0.76722599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Is Authentication Successful?\end{tabular}}}}%
+    \put(0.41897333,0.7779391){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}yes\end{tabular}}}}%
+    \put(0.75990234,0.7779391){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}no\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{flow_svg-tex.pdf}}%
+    \put(0.23400135,0.70141319){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Connection Established\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{flow_svg-tex.pdf}}%
+    \put(0.19505727,0.61110614){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Send Message (message, tags)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{flow_svg-tex.pdf}}%
+    \put(0.23969299,0.52079888){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Put Message in Queue\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{flow_svg-tex.pdf}}%
+    \put(0.22372112,0.43049183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Get Message from Queue\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{flow_svg-tex.pdf}}%
+    \put(0.28619631,0.34018457){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{flow_svg-tex.pdf}}%
+    \put(0.22971295,0.25879718){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Are Matching Tags Found?\end{tabular}}}}%
+    \put(0.17782606,0.26951042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}yes\end{tabular}}}}%
+    \put(0.49388651,0.26951042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}no\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{flow_svg-tex.pdf}}%
+    \put(0.01715156,0.19298448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Send Message to Target Clients\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{flow_svg-tex.pdf}}%
+    \put(0.40274461,0.19298448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No Matching Tags Found\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{flow_svg-tex.pdf}}%
+    \put(0.73499731,0.70141319){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Close Connection (4001)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{flow_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

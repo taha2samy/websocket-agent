@@ -1,0 +1,46 @@
+@startuml
+actor Client
+actor Admin
+
+package "WebSocket Agent" {
+    usecase "Initiate Connection" as UC1
+    usecase "Authenticate User" as UC2
+    usecase "Send Message" as UC3
+    usecase "Receive Message" as UC4
+    usecase "Close Connection" as UC5
+    usecase "View Logs" as UC6
+}
+
+Client --> UC1
+Client --> UC2
+Client --> UC3
+Client --> UC4
+Client --> UC5
+
+Admin --> UC6
+
+note right of UC1
+  Client establishes a connection
+end note
+
+note right of UC2
+  Validates client token and tags
+end note
+
+note right of UC3
+  Sends messages with optional tags
+end note
+
+note right of UC4
+  Receives messages from the server
+end note
+
+note right of UC5
+  Closes the connection gracefully
+end note
+
+note right of UC6
+  Admin can view logs for monitoring
+end note
+
+@enduml

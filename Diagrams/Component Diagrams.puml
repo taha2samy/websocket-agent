@@ -1,0 +1,39 @@
+@startuml
+package "WebSocket Agent" {
+    [WebSocket Server] 
+    [Authentication Module] 
+    [Message Queue Module] 
+    [Message Distributor Module] 
+    [Logger Module] 
+    [Client Interface] 
+}
+
+package "External Services" {
+    [Redis Server] 
+}
+
+[Client Interface] --> [WebSocket Server] : Connects to
+[WebSocket Server] --> [Authentication Module] : Authenticates clients
+[WebSocket Server] --> [Message Queue Module] : Queues messages
+[Message Queue Module] --> [Message Distributor Module] : Sends messages for distribution
+[Message Distributor Module] --> [Logger Module] : Logs processing events
+[Message Distributor Module] --> [Client Interface] : Sends messages to clients
+
+[Message Queue Module] --> [Redis Server] : (Optional) Publishes messages
+note right of [Message Queue Module]
+  Manages incoming and outgoing messages
+end note
+
+note right of [Authentication Module]
+  Validates tokens and tags for clients
+end note
+
+note right of [Message Distributor Module]
+  Distributes messages based on tags
+end note
+
+note right of [Logger Module]
+  Logs activities and errors
+end note
+
+@enduml

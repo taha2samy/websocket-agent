@@ -1,0 +1,127 @@
+%% Creator: Inkscape 1.4 (86a8ad7, 2024-10-11), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Sequence Diagram_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1035.25524902bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.54552308)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.00778793,0.49282223){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Client\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.00778793,0.04489148){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Client\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.14388611,0.49861791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WebSocketServer\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.14388611,0.03982026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WebSocketServer\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.27599658,0.49861791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Authentication\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.27599658,0.03982026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Authentication\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.36783734,0.49861791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MessageQueue\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.36783734,0.03982026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MessageQueue\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.5669762,0.49861791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MessageDistributor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.5669762,0.03982026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MessageDistributor\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.79477258,0.49861791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logger\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.79477258,0.03982026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logger\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.84730151,0.49861791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TargetClient\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.84730151,0.03982026){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TargetClient\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.02971376,0.47154582){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Initiate Connection\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.19409561,0.4504403){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Check Token and Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.01141023,0.42643694){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{alt}\end{tabular}}}}%
+    \put(0.05809647,0.42705744){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{[Authentication Failed]}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.2013402,0.41185155){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Invalid Token or Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.03695835,0.39074603){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Close Connection (4001)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.00416564,0.37315877){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{[Authentication Successful]}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.2013402,0.35891512){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Valid Token\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.03695835,0.33780959){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Connection Established\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.02971376,0.31670406){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Send Message (message, tags)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.19409561,0.29559849){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Put Message (message, sender_tags)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.2013402,0.27449296){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Acknowledge Message Received\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.41903905,0.25338743){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Get Message\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.41179446,0.23228193){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Return Message (message, sender_tags)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.62132089,0.2111764){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.6235781,0.17630615){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Identify Target Clients Based on Tags\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.56552728,0.15230283){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{alt}\end{tabular}}}}%
+    \put(0.6122135,0.15292324){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{[Matching Tags Found]}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.62132089,0.13771743){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Send Message\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.88655672,0.11226506){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Message Received\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.55828269,0.09467787){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{[No Matching Tags]}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{Sequence Diagram_svg-tex.pdf}}%
+    \put(0.62132089,0.08043414){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Log No Recipients (No matching tags)\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

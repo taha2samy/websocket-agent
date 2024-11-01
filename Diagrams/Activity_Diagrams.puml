@@ -1,0 +1,41 @@
+@startuml
+|Client|
+start
+:Initiate Connection;
+
+|WebSocketServer|
+:Check Token and Tags;
+
+if (Authentication Failed?) then (yes)
+    :Invalid Token or Tags;
+    :Close Connection (4001);
+    stop
+else (no)
+    :Valid Token;
+    :Connection Established;
+
+    |Client|
+    :Send Message (message, tags);
+    
+    |WebSocketServer|
+    :Put Message in MessageQueue;
+    
+    |MessageQueue|
+    :Acknowledge Message Received;
+
+    |MessageDistributor|
+    :Get Message from MessageQueue;
+    :Return Message (message, sender_tags);
+    
+    :Process Tags;
+    note right: Identify Target Clients Based on Tags;
+
+    if (Matching Tags Found?) then (yes)
+        :Send Message to TargetClient(s);
+        note right: Message Received;
+    else (no)
+        :Log No Recipients;
+    endif
+endif
+stop
+@enduml
