@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 logging = "*"
 websockets = "*"
-aioredis = "*"
+aioredis = "==2.0.1"
 
 [dev-packages]
 

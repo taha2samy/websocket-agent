@@ -21,8 +21,12 @@ SSL_KEY = config.get('server', 'ssl_key', fallback=None)
 VALID_TOKEN = config.get('auth', 'valid_token', fallback=None)
 SERVER_URL = config.get('server', 'server_url', fallback="localhost:8765").split(':')
 MESSAGE_FORMAT = config.get('server', 'message_format', fallback='json')
-
+QUEUE_TYPE = config.get('queue', 'type', fallback='asyncio')
 # Dictionary to track connected clients and their tags
+
+     
+
+
 clients = {}
 
 

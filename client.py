@@ -27,8 +27,16 @@ class WebSocketClientApp:
     def setup_gui(self):
         """Set up the GUI elements."""
         # Header Section
+        socket_frame = ttk.LabelFrame(self.root, text="socket", padding=(10, 10))
+        socket_frame.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
+        ttk.Label(socket_frame, text="IP:").grid(row=0, column=0, sticky="w")
+        ttk.Label(socket_frame, text="Port:").grid(row=0, column=2)
+        self.ip = ttk.Entry(socket_frame, width=30)
+        self.ip.grid(row=0, column=1, padx=5, pady=5)
+        self.port = ttk.Entry(socket_frame, width=10)  
+        self.port.grid(row=0, column=3, padx=5, pady=5)
         headers_frame = ttk.LabelFrame(self.root, text="Headers", padding=(10, 10))
-        headers_frame.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
+        headers_frame.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
         
         ttk.Label(headers_frame, text="Token:").grid(row=0, column=0, sticky="w")
         self.token_entry = ttk.Entry(headers_frame, width=30)
@@ -47,7 +55,7 @@ class WebSocketClientApp:
 
         # Message Section
         message_frame = ttk.LabelFrame(self.root, text="Message", padding=(10, 10))
-        message_frame.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
+        message_frame.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
         
         ttk.Label(message_frame, text="Enter Message:").grid(row=0, column=0, sticky="w")
         self.message_entry = ttk.Entry(message_frame, width=40)
@@ -58,7 +66,7 @@ class WebSocketClientApp:
 
         # Received Messages Section
         received_frame = ttk.LabelFrame(self.root, text="Received Messages", padding=(10, 10))
-        received_frame.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
+        received_frame.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
         
         self.received_text = scrolledtext.ScrolledText(received_frame, width=50, height=10, state='disabled')
         self.received_text.grid(row=0, column=0, padx=5, pady=5)
@@ -69,12 +77,15 @@ class WebSocketClientApp:
 
     async def connect(self):
         """Establish a WebSocket connection to the server."""
+        ip =self.ip.get()
+        port = self.port.get()
+        url=f"ws://{ip}:{port}"
         headers = {
             "Authorization": self.token_entry.get(),
             "tag": self.tag_entry.get()
         }
         try:
-            self.websocket = await websockets.connect("ws://localhost:8765", extra_headers=headers)
+            self.websocket = await websockets.connect(url, extra_headers=headers)
             self.update_connection_state(True)
             await self.receive_messages()
         except Exception as e:
